@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { DataLoginService } from 'src/app/services/data-login.service';
 
 @Component({
@@ -7,10 +7,11 @@ import { DataLoginService } from 'src/app/services/data-login.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  nombre: string = 'Sin nombre';
 
-  constructor(private loginService: DataLoginService) {
-    this.nombre = this.loginService.nombreUsuario
-   }
+  nombre: string = 'Sin Nombre';
+  
+  constructor(private loginServices: DataLoginService){
+      this.nombre = this.loginServices.nombreUsuario
+  }
 
 }

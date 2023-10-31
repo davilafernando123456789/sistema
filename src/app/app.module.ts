@@ -2,27 +2,29 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './pages/navbar/navbar.component';
-import { CrearProductosComponent } from './pages/productos/crear-productos/crear-productos.component';
-import { EditarProductosComponent } from './pages/productos/editar-productos/editar-productos.component';
-import { ListarProductosComponent } from './pages/productos/listar-productos/listar-productos.component';
-import { VerProductosComponent } from './pages/productos/ver-productos/ver-productos.component';
-import { CreateUsersComponent } from './pages/users/create-users/create-users.component';
-import { LoginComponent } from './pages/users/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'
+
+import { AppComponent } from './app.component';
+import { LoginComponent } from './pages/users/login/login.component';
+import { CreateUserComponent } from './pages/users/create-user/create-user.component';
+import { ListarProductosComponent } from './pages/productos/listar-productos/listar-productos.component';
+import { CrearProductosComponent } from './pages/productos/crear-productos/crear-productos.component';
+import { NavbarComponent } from './pages/navbar/navbar.component';
+import { VerProductoComponent } from './pages/productos/ver-producto/ver-producto.component';
+import { EditarProductosComponent } from './pages/productos/editar-productos/editar-productos.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    CrearProductosComponent,
-    EditarProductosComponent,
+    LoginComponent,
+    CreateUserComponent,
     ListarProductosComponent,
-    VerProductosComponent,
-    CreateUsersComponent,
-    LoginComponent
+    CrearProductosComponent,
+    NavbarComponent,
+    VerProductoComponent,
+    EditarProductosComponent
   ],
   imports: [
     BrowserModule,
