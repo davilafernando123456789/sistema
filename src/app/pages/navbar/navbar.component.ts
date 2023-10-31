@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataLoginService } from 'src/app/services/data-login.service';
 
 @Component({
@@ -6,12 +6,12 @@ import { DataLoginService } from 'src/app/services/data-login.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
+  nombreUsuario: string = 'Sin Nombre';
 
-  nombre: string = 'Sin Nombre';
-  
-  constructor(private loginServices: DataLoginService){
-      this.nombre = this.loginServices.nombreUsuario
+  constructor(private loginService: DataLoginService) {}
+
+  ngOnInit() {
+    this.nombreUsuario = this.loginService.nombreUsuario;
   }
-
 }
